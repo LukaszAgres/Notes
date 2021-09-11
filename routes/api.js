@@ -12,9 +12,9 @@ router.get('/notes/:id', noteActions.getNote)
 // zpisyawanie notatek
 router.post('/notes', noteActions.saveNote)
 // edytowanie notatek
-router.put('/notes:id', noteActions.updateNote)
+router.put('/notes/:id', noteActions.updateNote)
 // usuwanie notatek
-router.delete('/notes:id', noteActions.deleteNote)
+router.delete('/notes/:id', noteActions.deleteNote)
 
 
 module.exports = router;
