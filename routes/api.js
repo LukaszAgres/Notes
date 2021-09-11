@@ -3,7 +3,18 @@ const router = express.Router();
 
 const noteActions = require('../actions/api/notes');
 
-router.get('/', noteActions.saveNote)
+/* router.get('/', noteActions.saveNote) */
+
+// pobieranie notatek
+router.get('/notes', noteActions.getAllNotes)
+// pobieranie notatki (konkretnej)
+router.get('/notes/:id', noteActions.getNote)
+// zpisyawanie notatek
+router.post('/notes', noteActions.saveNote)
+// edytowanie notatek
+router.put('/notes:id', noteActions.updateNote)
+// usuwanie notatek
+router.delete('/notes:id', noteActions.deleteNote)
 
 
 module.exports = router;
